@@ -1,0 +1,847 @@
+2016-03-10 15:24:34 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457594675</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[测试内容]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-10 15:24:34 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2016-03-10 15:24:34 response :
+------------
+Array:
+params : Array ;
+
+2016-03-10 15:25:26 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457594727</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[测试内容]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-10 15:25:26 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2016-03-10 15:25:26 response :
+------------
+Array:
+params : Array ;
+
+2016-03-10 15:25:40 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457594741</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[11]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-10 15:25:40 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2016-03-10 15:25:40 response :
+------------
+Array:
+params : Array ;
+
+2016-03-10 15:25:43 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457594744</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[11]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-10 15:25:43 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2016-03-10 15:25:43 response :
+------------
+Array:
+params : Array ;
+
+2016-03-10 15:28:05 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457594886</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[测试11]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-10 15:28:05 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2016-03-10 15:28:05 response :
+------------
+Array:
+params : Array ;
+
+2016-03-10 15:28:13 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457594894</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[测试11]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-10 15:28:13 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2016-03-10 15:28:13 response :
+------------
+Array:
+params : Array ;
+
+2016-03-10 15:30:42 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457595043</CreateTime><MsgType><![CDATA[event]]></MsgType><Event><![CDATA[subscribe]]></Event><EventKey><![CDATA[]]></EventKey><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-10 15:30:42 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 9 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-10 15:30:42 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : text ;
+Content : 测试111 ;
+
+2016-03-10 15:31:50 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457595111</CreateTime><MsgType><![CDATA[event]]></MsgType><Event><![CDATA[subscribe]]></Event><EventKey><![CDATA[]]></EventKey><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-10 15:31:50 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 9 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-10 15:31:50 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : text ;
+Content : 测试111 ;
+
+2016-03-10 15:31:57 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457595119</CreateTime><MsgType><![CDATA[event]]></MsgType><Event><![CDATA[subscribe]]></Event><EventKey><![CDATA[]]></EventKey><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-10 15:31:57 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 9 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-10 15:31:57 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : text ;
+Content : 测试111 ;
+
+2016-03-10 16:42:48 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 16:42:49 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 16:42:49 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 16:45:44 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 16:45:44 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 16:45:44 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 16:48:03 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 16:48:03 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 16:48:03 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 16:50:18 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 16:50:19 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 16:50:19 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 16:50:38 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 16:50:38 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 16:50:38 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 16:50:50 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 16:50:51 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 16:50:51 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 16:50:59 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 16:50:59 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 16:51:00 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 16:51:05 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 16:51:05 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 16:51:05 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 17:01:34 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457600495</CreateTime><MsgType><![CDATA[event]]></MsgType><Event><![CDATA[subscribe]]></Event><EventKey><![CDATA[]]></EventKey><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-10 17:01:34 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 9 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-10 17:01:34 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : text ;
+Content : 测试，你也好！ ;
+
+2016-03-10 17:01:39 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457600500</CreateTime><MsgType><![CDATA[event]]></MsgType><Event><![CDATA[subscribe]]></Event><EventKey><![CDATA[]]></EventKey><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-10 17:01:39 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 9 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-10 17:01:39 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : text ;
+Content : 测试，你也好！ ;
+
+2016-03-10 17:01:40 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457600501</CreateTime><MsgType><![CDATA[event]]></MsgType><Event><![CDATA[subscribe]]></Event><EventKey><![CDATA[]]></EventKey><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-10 17:01:40 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 9 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-10 17:01:40 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : text ;
+Content : 测试111 ;
+
+2016-03-10 17:02:00 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 17:02:01 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 17:02:01 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 17:02:10 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 17:02:10 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 17:02:10 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 17:02:59 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 17:02:59 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 17:03:00 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 17:03:07 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 17:03:08 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 17:03:08 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 17:05:24 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 17:05:25 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 17:05:25 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 17:06:26 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457600787</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[测试内容]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-10 17:06:26 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2016-03-10 17:06:26 response :
+------------
+
+2016-03-10 17:07:13 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457600835</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[测试]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-10 17:07:14 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 9 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-10 17:07:14 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : text ;
+Content : 测试，你也好！ ;
+
+2016-03-10 17:08:03 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 17:08:03 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 17:08:04 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 17:22:53 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 17:22:53 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 17:22:53 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 17:33:13 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 17:33:13 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 17:33:13 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 18:09:18 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 18:09:18 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 18:09:18 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 18:13:01 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 18:13:01 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 18:13:01 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 18:13:13 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 18:13:14 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 18:13:14 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 18:13:21 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 18:13:21 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 18:13:21 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 18:17:51 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 18:17:51 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 18:17:51 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 18:18:10 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 18:18:10 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 18:18:11 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 18:18:15 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 18:18:16 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 18:18:16 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 18:28:24 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 18:28:24 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
+2016-03-10 18:28:24 trace :
+------------
+Array:
+errno : -1 ;
+message : 微信公众平台返回接口错误. 
+错误代码为: 40005 
+,错误描述为: appid 校验错误 ;
+
