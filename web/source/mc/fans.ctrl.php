@@ -87,7 +87,7 @@ if ($do == 'display') {
 			if(!empty($post['next'])) {
 				$_GPC['next_openid'] = $post['next'];
 			} else {
-				pdo_update('mc_mapping_fans', array('follow' => 0));
+				pdo_update('mc_mapping_fans', array('follow' => 0), array('uniacid' => $_W['uniacid']));
 			}
 			$fans = $acc->fansAll();
 			if(!is_error($fans) && is_array($fans['fans'])) {

@@ -15,14 +15,20 @@
 						<?php  if($account['level'] == 3) { ?>认证订阅号<?php  } ?>
 						<?php  if($account['level'] == 4) { ?>认证服务号/认证媒体/政府订阅号<?php  } ?>
 						</span>
+						<?php  if($account['type'] == 3) { ?>
+						<span class="text-success"><i class="fa fa-check-circle"></i> 登录授权</span>
+						<?php  } else { ?>
 						<?php  if($account['isconnect'] == 1) { ?>
 						<span class="text-success"><i class="fa fa-check-circle"></i> 成功接入<?php  echo $accounttypes[$account['type']]['title'];?></span>
 						<?php  } else { ?>
 						<span class="text-warning"><i class="fa fa-times-circle"></i> 未接入<?php  echo $accounttypes[$account['type']]['title'];?></span>
 						<?php  } ?>
+						<?php  } ?>
 					</p>
+					<?php  if($account['type'] != 3) { ?>
 					<p><strong>接口地址： </strong> <a href="javascript:;" style="color:#66667C;"><?php  echo $_W['siteroot'];?>api.php?id=<?php  echo $account['acid'];?></a></p>
 					<p><strong>　Token： </strong> <a href="javascript:;" title="点击复制Token" style="color:#66667C;"><?php  echo $account['token'];?></a></p>
+					<?php  } ?>
 				</div>
 				<div class="col-sm-5 text-right">
 					<img src="<?php  echo tomedia('qrcode_'.$account['acid'].'.jpg')?>?time=<?php  echo time()?>" class="img-responsive img-thumbnail" width="150" onerror="this.src='resource/images/gw-wx.gif'" />

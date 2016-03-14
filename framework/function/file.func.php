@@ -270,7 +270,7 @@ function file_remote_delete($file) {
 			return error(1, '删除附件失败，请检查配置并重新删除');
 		}
 	} elseif ($_W['setting']['remote']['type'] == '2') {
-		require(IA_ROOT . '/framework/library/alioss/sdk.class.php');
+		require_once(IA_ROOT . '/framework/library/alioss/sdk.class.php');
 		$oss = new ALIOSS($_W['setting']['remote']['alioss']['key'], $_W['setting']['remote']['alioss']['secret'], $_W['setting']['remote']['alioss']['ossurl']);
 		$response = $oss->delete_object($_W['setting']['remote']['alioss']['bucket'], $file);
 		if ($response->status == 204) {

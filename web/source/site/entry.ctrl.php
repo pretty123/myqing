@@ -30,7 +30,12 @@ if(!$entry['direct']) {
 	if(empty($module)) {
 		message("访问非法, 没有操作权限. (module: {$entry['module']})");
 	}
-	if(!uni_user_module_permission_check($entry['module'] . '_menu_' . $entry['do'], $entry['module'])) {
+	if($entry['entry'] == 'menu') {
+		$permission = uni_user_module_permission_check($entry['module'] . '_menu_' . $entry['do'], $entry['module']);
+	} else {
+		$permission = uni_user_module_permission_check($entry['module'] . '_rule', $entry['module']);
+	}
+	if(!$permission) {
 		message('您没有权限进行该操作');
 	}
 	define('FRAME', 'ext');

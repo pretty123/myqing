@@ -437,12 +437,12 @@ class WeiXinAccount extends WeAccount {
 			return error('1', 'Invalid params');
 		}
 		$token = $this->getAccessToken();
-		$url = sprintf($this->apis['barcode']['post'], $token);
-		$response = ihttp_request($url, json_encode($barcode));
+		$response = ihttp_request("https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token=".$token, json_encode($barcode));
 		if (is_error($response)) {
 			return $response;
 		}
 		$content = @json_decode($response['content'], true);
+		
 		if(empty($content)) {
 			return error(-1, "接口调用失败, 元数据: {$response['meta']}");
 		}
@@ -460,8 +460,7 @@ class WeiXinAccount extends WeAccount {
 			return error('1', '场景字符串错误');
 		}
 		$token = $this->getAccessToken();
-		$url = sprintf($this->apis['barcode']['post'], $token);
-		$response = ihttp_request($url, json_encode($barcode));
+		$response = ihttp_request("https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token=".$token, json_encode($barcode));
 		if (is_error($response)) {
 			return $response;
 		}

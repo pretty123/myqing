@@ -79,6 +79,18 @@ class CoreModuleReceiver extends WeModuleReceiver {
 						'tag' => base64_encode(iserializer($userinfo)),
 				);
 				pdo_update('mc_mapping_fans', $fans, array('openid' => $this->message['from']));
+				
+				if (!empty($_W['member']['uid'])) {
+					$member = array();
+					if (!empty($userinfo['nickname'])) {
+						$member['nickname'] = $fans['nickname'];
+					}
+					if (!empty($userinfo['headimgurl'])) {
+						$member['avatar'] = $userinfo['headimgurl'];
+					}
+					load()->model('mc');
+					mc_update($_W['member']['uid'], $member);
+				}
 			}
 		}
 		$stat_setting = uni_setting($_W['uniacid'], 'stat');

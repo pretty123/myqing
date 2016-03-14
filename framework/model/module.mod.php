@@ -33,6 +33,11 @@ function module_types() {
 			'title' => '行业解决方案',
 			'desc' => ''
 		),
+		'enterprise' => array(
+			'name' => 'enterprise',
+			'title' => '企业应用',
+			'desc' => ''
+		),
 		'other' => array(
 			'name' => 'other',
 			'title' => '其他',
