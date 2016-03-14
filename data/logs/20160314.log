@@ -468,3 +468,224 @@ ToUserName : fromUser去去去 ;
 MsgType : text ;
 Content : fromUser去去去 ;
 
+2016-03-14 12:10:24 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457928623</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[图文回复]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 12:10:24 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2016-03-14 12:10:24 response :
+------------
+
+2016-03-14 12:11:06 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457928665</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[ggg]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 12:11:06 params :
+------------
+Array:
+message : Array ;
+module : tuwen123 ;
+rule : 15 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-14 12:11:06 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 2 ;
+Articles : Array ;
+
+2016-03-14 12:15:35 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457928934</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[图文回复]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 12:15:35 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2016-03-14 12:15:35 response :
+------------
+
+2016-03-14 12:15:37 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457928936</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[图文回复]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 12:15:37 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2016-03-14 12:15:37 response :
+------------
+
+2016-03-14 12:15:42 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457928941</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[bbb]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 12:15:42 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2016-03-14 12:15:42 response :
+------------
+
+2016-03-14 12:15:56 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457928955</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[ggg]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 12:15:56 params :
+------------
+Array:
+message : Array ;
+module : tuwen123 ;
+rule : 15 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-14 12:15:56 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 2 ;
+Articles : Array ;
+
+2016-03-14 12:16:10 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457928969</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[ggg]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 12:16:10 params :
+------------
+Array:
+message : Array ;
+module : tuwen123 ;
+rule : 15 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-14 12:16:10 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 2 ;
+Articles : Array ;
+
+2016-03-14 12:17:51 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457929070</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[ggg]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 12:17:51 params :
+------------
+Array:
+message : Array ;
+module : tuwen123 ;
+rule : 15 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-14 12:17:51 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 2 ;
+Articles : Array ;
+
+2016-03-14 14:02:35 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457935354</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[ggg]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 14:02:35 params :
+------------
+Array:
+message : Array ;
+module : tuwen123 ;
+rule : 15 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-14 14:02:35 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 2 ;
+Articles : Array ;
+
+2016-03-14 14:04:33 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457935472</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[ggg]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 14:04:33 params :
+------------
+Array:
+message : Array ;
+module : tuwen123 ;
+rule : 15 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-14 14:04:33 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 3 ;
+Articles : Array ;
+
+2016-03-14 14:23:57 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457936636</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[自定义图文]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 14:23:57 params :
+------------
+Array:
+message : Array ;
+module : cover ;
+rule : 16 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-14 14:23:57 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 1 ;
+Articles : Array ;
+
