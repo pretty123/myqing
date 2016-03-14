@@ -9,7 +9,7 @@ class CoverModuleProcessor extends WeModuleProcessor {
 	public function respond() {
 		global $_W;
 		$content = $this->message['content'];
-		$from = $this->message['from'];
+		//$from = $this->message['from'];
 		$reply = pdo_fetch('SELECT * FROM ' . tablename('cover_reply') . ' WHERE `rid`=:rid', array(':rid' => $this->rule));
 		if(!empty($reply)) {
 			load()->model('module');
@@ -20,7 +20,7 @@ class CoverModuleProcessor extends WeModuleProcessor {
 			$url = $reply['url'];
 			if(empty($reply['url'])) {
 				$entry = pdo_fetch("SELECT eid FROM ".tablename('modules_bindings')." WHERE module = :module AND do = :do", array(':module' => $reply['module'], ':do' => $reply['do']));
-				$url = url('entry', array('eid' => $entry['eid'],'from' => $from));
+				$url = url('entry', array('eid' => $entry['eid']));
 			}
 			$news = array();
 			$news[] = array(
