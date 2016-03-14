@@ -689,3 +689,225 @@ MsgType : news ;
 ArticleCount : 1 ;
 Articles : Array ;
 
+2016-03-14 14:29:40 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457936979</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[自定义图文]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 14:29:40 params :
+------------
+Array:
+message : Array ;
+module : cover ;
+rule : 16 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-14 14:29:40 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 1 ;
+Articles : Array ;
+
+2016-03-14 14:40:06 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457937606</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[ggg]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 14:40:06 params :
+------------
+Array:
+message : Array ;
+module : tuwen123 ;
+rule : 15 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-14 14:40:06 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 3 ;
+Articles : Array ;
+
+2016-03-14 14:41:18 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457937677</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[自定义图文]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 14:41:18 params :
+------------
+Array:
+message : Array ;
+module : cover ;
+rule : 16 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-14 14:41:18 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 1 ;
+Articles : Array ;
+
+2016-03-14 14:45:55 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457937954</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[自定义图文]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 14:45:55 params :
+------------
+Array:
+message : Array ;
+module : cover ;
+rule : 16 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-14 14:45:55 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 1 ;
+Articles : Array ;
+
+2016-03-14 14:46:18 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457937977</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[自定义图文]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 14:46:18 params :
+------------
+Array:
+message : Array ;
+module : cover ;
+rule : 16 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-14 14:46:18 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 1 ;
+Articles : Array ;
+
+2016-03-14 14:52:08 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457938327</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[自定义图文]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 14:52:08 params :
+------------
+Array:
+message : Array ;
+module : cover ;
+rule : 16 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-14 14:52:08 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 1 ;
+Articles : Array ;
+
+2016-03-14 14:53:29 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457938409</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[自定义图文]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 14:53:30 params :
+------------
+Array:
+message : Array ;
+module : cover ;
+rule : 16 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-14 14:53:30 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 1 ;
+Articles : Array ;
+
+2016-03-14 14:59:00 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457938739</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[自定义图文]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 14:59:00 params :
+------------
+Array:
+message : Array ;
+module : cover ;
+rule : 16 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-14 14:59:00 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 1 ;
+Articles : Array ;
+
+2016-03-14 15:01:49 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457938909</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[自定义图文]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 15:01:49 params :
+------------
+Array:
+message : Array ;
+module : cover ;
+rule : 16 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-14 15:01:49 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : news ;
+ArticleCount : 1 ;
+Articles : Array ;
+
+2016-03-14 15:45:43 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457941542</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[血型]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 15:45:43 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2016-03-14 15:45:43 response :
+------------
+
