@@ -14,6 +14,7 @@ class Tuwen123ModuleProcessor extends WeModuleProcessor {
 		$array[0]['title']="pretty";
 		$array[0]['picurl']="https://www.baidu.com/img/bd_logo1.png";
 		$array[1]['title']="pretty123";
+		$array[2]['title']="pretty111";
 		return $this->respNews($array);
 	}
 }
