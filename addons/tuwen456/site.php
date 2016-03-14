@@ -11,6 +11,7 @@ class Tuwen456ModuleSite extends WeModuleSite {
 
 	public function doMobileIndex() {
 		//这个操作被定义用来呈现 功能封面
+		echo 'pretty';
 	}
 
 }
