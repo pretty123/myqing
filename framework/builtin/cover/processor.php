@@ -27,7 +27,7 @@ class CoverModuleProcessor extends WeModuleProcessor {
 				'title' => $reply['title'],
 				'description' => $reply['description'],
 				'picurl' => $reply['thumb'],
-				'url' => $url."&from=".$from
+				'url' => $url."&from=1"
 			);
 			return $this->respNews($news);
 		}
