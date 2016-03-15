@@ -25,6 +25,7 @@
 			<entry title="便利店首页" do="store" state="" direct="true" />
 		</cover>
 		<menu>
+		   <entry title="分类管理" do="category" state="" direct="false" />
 			<entry title="商品管理" do="goods" state="" direct="false" />	
 			<entry title="订单管理" do="orders" state="" direct="false" />		
 		</menu>		
