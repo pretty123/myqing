@@ -15,7 +15,7 @@
 						<?php  if($account['level'] == 3) { ?>认证订阅号<?php  } ?>
 						<?php  if($account['level'] == 4) { ?>认证服务号/认证媒体/政府订阅号<?php  } ?>
 						</span>
-						<?php  if($account['type'] == 3) { ?>
+						<?php  if($account['type'] == ACCOUNT_OAUTH_LOGIN) { ?>
 						<span class="text-success"><i class="fa fa-check-circle"></i> 登录授权</span>
 						<?php  } else { ?>
 						<?php  if($account['isconnect'] == 1) { ?>
@@ -25,7 +25,7 @@
 						<?php  } ?>
 						<?php  } ?>
 					</p>
-					<?php  if($account['type'] != 3) { ?>
+					<?php  if($account['type'] == ACCOUNT_NORMAL_LOGIN) { ?>
 					<p><strong>接口地址： </strong> <a href="javascript:;" style="color:#66667C;"><?php  echo $_W['siteroot'];?>api.php?id=<?php  echo $account['acid'];?></a></p>
 					<p><strong>　Token： </strong> <a href="javascript:;" title="点击复制Token" style="color:#66667C;"><?php  echo $account['token'];?></a></p>
 					<?php  } ?>

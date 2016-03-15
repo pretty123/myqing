@@ -21,3 +21,19 @@ function attachment_alioss_buctkets($key, $secret) {
 	}
 	return $bucket_container;
 }
+
+function attachment_qiniu_auth($key, $secret,$bucket) {
+	require_once(IA_ROOT . '/framework/library/qiniu/autoload.php');
+	$auth = new Qiniu\Auth($key, $secret);
+	$token = $auth->uploadToken($bucket);
+	$uploadmgr = new Qiniu\Storage\UploadManager();
+	list($ret, $err) = $uploadmgr->putFile($token, 'MicroEngine.ico', ATTACHMENT_ROOT.'images/global/MicroEngine.ico');
+	if ($err !== null) {
+		$err = (array)$err;
+		$err = (array)array_pop($err);
+		$err = json_decode($err['body'], true);
+		return error(-1, $err);
+	} else {
+		return true;
+	}
+}

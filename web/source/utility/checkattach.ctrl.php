@@ -99,3 +99,27 @@ if ($do == 'oss') {
 		message(error(-1, '配置失败，请检查bucket是否填写正确'),'','ajax');
 	}
 }
+if ($do == 'qiniu') {
+	load()->model('attachment');
+	$auth= attachment_qiniu_auth(trim($_GPC['accesskey']), trim($_GPC['secretkey']), trim($_GPC['bucket']));
+	if (is_error($auth)) {
+		message(error(-1, '配置失败，请检查配置'), '', 'ajax');
+	}
+	load()->func('communication');
+	$url = $_GPC['url'];
+	$url = strexists($url, 'http') ? trim($url, '/') : 'http://'.trim($url, '/');
+	$filename = 'MicroEngine.ico';
+	$response = ihttp_get($url. '/'.$filename);
+	if (is_error($response)) {
+		message(error(-1, '配置失败，七牛访问url错误'),'','ajax');
+	}
+	if (intval($response['code']) != 200) {
+		message(error(-1, '配置失败，七牛访问url错误,请保证bucket为公共读取的'),'','ajax');
+	}
+	$image = getimagesizefromstring($response['content']);
+	if (!empty($image) && strexists($image['mime'], 'image')) {
+		message(error(0,'配置成功'),'','ajax');
+	} else {
+		message(error(-1, '配置失败，七牛访问url错误'),'','ajax');
+	}
+}

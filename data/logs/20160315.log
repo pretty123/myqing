@@ -1,0 +1,60 @@
+2016-03-15 11:06:44 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1458011204</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2016-03-15 11:07:00 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1458011220</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2016-03-15 11:07:00 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 9 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-15 11:07:00 response :
+------------
+Array:
+FromUserName : gh_d6e03a1f37f3 ;
+ToUserName : oDMJXt6UEbQUm9GaCLhBfURTet6U ;
+MsgType : text ;
+Content : 测试111 ;
+
+2016-03-15 11:07:07 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1458011227</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[便利店]]></Content>
+<MsgId>6262110537574979888</MsgId>
+</xml>
+
+2016-03-15 11:07:07 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2016-03-15 11:07:07 response :
+------------
+

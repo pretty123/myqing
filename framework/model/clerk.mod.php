@@ -10,7 +10,7 @@ function clerk_check() {
 	if(empty($_W['openid'])) {
 		return error(-1, '获取粉丝openid失败');
 	}
-	$data = pdo_get('activity_coupon_password', array('uniacid' => $_W['uniacid'], 'openid' => $_W['openid']));
+	$data = pdo_get('activity_clerks', array('uniacid' => $_W['uniacid'], 'openid' => $_W['openid']));
 	if(empty($data)) {
 		return error(-1, '不是操作店员');
 	}

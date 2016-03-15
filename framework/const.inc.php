@@ -18,6 +18,8 @@ define('ACCOUNT_SUBSCRIPTION', 1);
 define('ACCOUNT_SUBSCRIPTION_VERIFY', 3);
 define('ACCOUNT_SERVICE', 2);
 define('ACCOUNT_SERVICE_VERIFY', 4);
+define('ACCOUNT_OAUTH_LOGIN', 3);
+define('ACCOUNT_NORMAL_LOGIN', 1);
 
 define('WEIXIN_ROOT', 'https://mp.weixin.qq.com');
 

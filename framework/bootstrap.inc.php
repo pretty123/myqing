@@ -119,7 +119,13 @@ if (empty($_W['setting']['upload'])) {
 }
 $_W['attachurl'] = $_W['attachurl_local'] = $_W['siteroot'] . $_W['config']['upload']['attachdir'] . '/';
 if (!empty($_W['setting']['remote']['type'])) {
-	$_W['attachurl'] = $_W['attachurl_remote'] = ($_W['setting']['remote']['type'] == 1) ? $_W['setting']['remote']['ftp']['url'] . '/' : $_W['setting']['remote']['alioss']['url'].'/';
+	if ($_W['setting']['remote']['type'] == 1) {
+		$_W['attachurl'] = $_W['attachurl_remote'] = $_W['setting']['remote']['ftp']['url'] . '/';
+	} elseif ($_W['setting']['remote']['type'] == 2) {
+		$_W['attachurl'] = $_W['attachurl_remote'] = $_W['setting']['remote']['alioss']['url'].'/';
+	} elseif ($_W['setting']['remote']['type'] == 3) {
+		$_W['attachurl'] = $_W['attachurl_remote'] = $_W['setting']['remote']['qiniu']['url'].'/';
+	}
 }
 $_W['os'] = Agent::deviceType();
 if($_W['os'] == Agent::DEVICE_MOBILE) {

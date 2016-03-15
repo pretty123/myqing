@@ -4,18 +4,15 @@
  * WeEngine is NOT a free software, it under the license terms, visited http://www.we7.cc/ for more details.
  */
 defined('IN_IA') or exit('Access Denied');
-
 $_W['page']['title'] = '全局设置 - 附件设置 - 系统管理';
 $dos = array('attachment', 'remote', 'buckets');
 $do = in_array($do, $dos) ? $do : 'global';
 load()->model('setting');
 load()->model('attachment');
-
 if ($do == 'global') {
 	if (checksubmit('submit')) {
 		$harmtype = array('asp','php','jsp','js','css','php3','php4','php5','ashx','aspx','exe','cgi');
 		$upload = $_GPC['upload'];
-		
 		$upload['image']['thumb'] = !empty($upload['image']['thumb']) ? 1 : 0;
 		$upload['image']['width'] = intval(trim($upload['image']['width']));
 		if(!empty($upload['image']['thumb']) && empty($upload['image']['width'])){
@@ -95,6 +92,12 @@ if ($do == 'global') {
 				'secret' => $_GPC['alioss']['secret'],
 				'bucket' => $_GPC['alioss']['bucket'],
 			),
+			'qiniu' => array(
+				'accesskey' => trim($_GPC['qiniu']['accesskey']),
+				'secretkey' => trim($_GPC['qiniu']['secretkey']),
+				'bucket' => trim($_GPC['qiniu']['bucket']),
+				'url' => trim($_GPC['qiniu']['url'])
+			)
 		);
 		if ($remote['type'] == '2') {
 			if (trim($remote['alioss']['key']) == '') {
@@ -129,6 +132,26 @@ if ($do == 'global') {
 			}
 			if (empty($remote['ftp']['password'])) {
 				message('FTP密码为必填项.');
+			}
+		} elseif ($remote['type'] == '3') {
+			if (empty($remote['qiniu']['accesskey'])) {
+				message('请填写Accesskey', referer(), 'info');
+			}
+			if (empty($remote['qiniu']['secretkey'])) {
+				message('secretkey', referer(), 'info');
+			}
+			if (empty($remote['qiniu']['bucket'])) {
+				message('请填写bucket', referer(), 'info');
+			}
+			if (empty($remote['qiniu']['url'])) {
+				message('请填写url', referer(), 'info');
+			} else {
+				$remote['qiniu']['url'] = strexists($remote['qiniu']['url'], 'http') ? trim($remote['qiniu']['url'], '/') : 'http://'. trim($remote['qiniu']['url'], '/');
+			}
+			$auth = attachment_qiniu_auth($remote['qiniu']['accesskey'], $remote['qiniu']['secretkey'], $remote['qiniu']['bucket']);
+			if (is_error($auth)) {
+				$message = $auth['message']['error'] == 'bad token' ? 'Accesskey或Secretkey填写错误， 请检查后重新提交' : 'bucket填写错误，请检查后重新提交';
+				message($message, referer(), 'info');
 			}
 		}
 		setting_save($remote, 'remote');

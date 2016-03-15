@@ -911,3 +911,411 @@ rule : -1 ;
 2016-03-14 15:45:43 response :
 ------------
 
+2016-03-14 15:51:32 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457941891</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[血型]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 15:51:32 params :
+------------
+Array:
+message : Array ;
+module : bloodpretty ;
+rule : 17 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-14 15:51:32 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : text ;
+Content : 请输入你的血型(A, B, O, AB), 来分析你今年的运程.  ;
+
+2016-03-14 15:51:40 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457941900</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[A]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 15:51:40 params :
+------------
+Array:
+message : Array ;
+module : bloodpretty ;
+rule : 17 ;
+priority : 0 ;
+context : 1 ;
+
+2016-03-14 15:51:40 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : text ;
+Content : A型血今年..... ;
+
+2016-03-14 15:51:47 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457941906</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[B]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 15:51:47 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2016-03-14 15:51:47 response :
+------------
+
+2016-03-14 15:51:50 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457941909</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[B]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 15:51:50 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2016-03-14 15:51:50 response :
+------------
+
+2016-03-14 15:51:51 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457941910</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[B]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 15:51:51 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2016-03-14 15:51:51 response :
+------------
+
+2016-03-14 15:51:51 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457941910</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[B]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 15:51:51 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2016-03-14 15:51:51 response :
+------------
+
+2016-03-14 15:51:51 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1457941911</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[B]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-14 15:51:51 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2016-03-14 15:51:51 response :
+------------
+
+2016-03-14 15:55:26 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1457942126</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2016-03-14 15:55:35 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1457942135</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2016-03-14 15:55:35 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 9 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-14 15:55:35 response :
+------------
+Array:
+FromUserName : gh_d6e03a1f37f3 ;
+ToUserName : oDMJXt6UEbQUm9GaCLhBfURTet6U ;
+MsgType : text ;
+Content : 测试，你也好！ ;
+
+2016-03-14 15:55:44 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1457942144</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[血型]]></Content>
+<MsgId>6261813828349248914</MsgId>
+</xml>
+
+2016-03-14 15:55:44 params :
+------------
+Array:
+message : Array ;
+module : bloodpretty ;
+rule : 17 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-14 15:55:44 response :
+------------
+Array:
+FromUserName : gh_d6e03a1f37f3 ;
+ToUserName : oDMJXt6UEbQUm9GaCLhBfURTet6U ;
+MsgType : text ;
+Content : 请输入你的血型(A, B, O, AB), 来分析你今年的运程.  ;
+
+2016-03-14 15:55:50 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1457942150</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[a]]></Content>
+<MsgId>6261813854119052693</MsgId>
+</xml>
+
+2016-03-14 15:55:50 params :
+------------
+Array:
+message : Array ;
+module : bloodpretty ;
+rule : 17 ;
+priority : 0 ;
+context : 1 ;
+
+2016-03-14 15:55:50 response :
+------------
+Array:
+FromUserName : gh_d6e03a1f37f3 ;
+ToUserName : oDMJXt6UEbQUm9GaCLhBfURTet6U ;
+MsgType : text ;
+Content : A型血今年..... ;
+
+2016-03-14 15:55:57 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1457942157</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[b]]></Content>
+<MsgId>6261813884183823768</MsgId>
+</xml>
+
+2016-03-14 15:55:57 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2016-03-14 15:55:57 response :
+------------
+
+2016-03-14 15:56:09 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1457942169</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[血型]]></Content>
+<MsgId>6261813935723431323</MsgId>
+</xml>
+
+2016-03-14 15:56:09 params :
+------------
+Array:
+message : Array ;
+module : bloodpretty ;
+rule : 17 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-14 15:56:09 response :
+------------
+Array:
+FromUserName : gh_d6e03a1f37f3 ;
+ToUserName : oDMJXt6UEbQUm9GaCLhBfURTet6U ;
+MsgType : text ;
+Content : 请输入你的血型(A, B, O, AB), 来分析你今年的运程.  ;
+
+2016-03-14 15:56:14 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1457942174</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[b]]></Content>
+<MsgId>6261813957198267810</MsgId>
+</xml>
+
+2016-03-14 15:56:14 params :
+------------
+Array:
+message : Array ;
+module : bloodpretty ;
+rule : 17 ;
+priority : 0 ;
+context : 1 ;
+
+2016-03-14 15:56:14 response :
+------------
+Array:
+FromUserName : gh_d6e03a1f37f3 ;
+ToUserName : oDMJXt6UEbQUm9GaCLhBfURTet6U ;
+MsgType : text ;
+Content : B型血今年..... ;
+
+2016-03-14 16:41:29 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1457944889</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[圆通 700074134800]]></Content>
+<MsgId>6261825618034477763</MsgId>
+</xml>
+
+2016-03-14 16:41:29 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2016-03-14 16:41:29 response :
+------------
+
+2016-03-14 16:43:35 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1457945015</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2016-03-14 16:43:49 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1457945029</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2016-03-14 16:43:49 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 9 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-14 16:43:49 response :
+------------
+Array:
+FromUserName : gh_d6e03a1f37f3 ;
+ToUserName : oDMJXt6UEbQUm9GaCLhBfURTet6U ;
+MsgType : text ;
+Content : 测试111 ;
+
+2016-03-14 16:44:05 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1457945044</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[圆通 4444]]></Content>
+<MsgId>6261826283754408720</MsgId>
+</xml>
+
+2016-03-14 16:44:05 params :
+------------
+Array:
+message : Array ;
+module : userapi ;
+rule : 6 ;
+priority : 255 ;
+keyword : Array ;
+
+2016-03-14 16:44:05 response :
+------------
+Array:
+FromUserName : gh_d6e03a1f37f3 ;
+ToUserName : oDMJXt6UEbQUm9GaCLhBfURTet6U ;
+MsgType : text ;
+Content : 没有查找到相关的数据, 错误信息为: 单号非法,不足5位或者超出20位. 请重新发送或检查您的输入格式, 正确格式为: 快递公司+空格+单号, 例如: 申通 2309381801 ;
+
+2016-03-14 16:44:32 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1457945072</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[圆通  700074134800]]></Content>
+<MsgId>6261826404013493028</MsgId>
+</xml>
+
+2016-03-14 16:44:32 params :
+------------
+Array:
+message : Array ;
+module : userapi ;
+rule : 6 ;
+priority : 255 ;
+keyword : Array ;
+
+2016-03-14 16:44:32 response :
+------------
+Array:
+FromUserName : gh_d6e03a1f37f3 ;
+ToUserName : oDMJXt6UEbQUm9GaCLhBfURTet6U ;
+MsgType : news ;
+ArticleCount : 1 ;
+Articles : Array ;
+

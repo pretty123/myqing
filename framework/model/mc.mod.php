@@ -228,7 +228,7 @@ function mc_fansinfo($openidOruid, $acid = 0, $uniacid = 0){
 			$fan['tag'] = array();
 		}
 	}
-	if (empty($fan) && !empty($_SESSION['userinfo'])) {
+	if (empty($fan) && $openidOruid == $_W['openid'] && !empty($_SESSION['userinfo'])) {
 		$fan['tag'] = unserialize(base64_decode($_SESSION['userinfo']));
 		$fan['uid'] = 0;
 		$fan['openid'] = $fan['tag']['openid'];
