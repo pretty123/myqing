@@ -18,7 +18,7 @@ class We7_storeModule extends WeModule {
 		if(checksubmit()) {
  
 			// $_GPC 可以用来获取 Cookies,表单中以及地址栏参数
-			$dat = $_GPC['dat'];
+			$dat = $_GPC['data'];
  
 			// 验证表单, 通过 message() 方法提示用户操作错误信息
 			empty($dat['name']) && message('请填写便利店名称');
