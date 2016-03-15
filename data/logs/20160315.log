@@ -58,3 +58,233 @@ rule : -1 ;
 2016-03-15 11:07:07 response :
 ------------
 
+2016-03-15 11:09:44 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1458011384</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2016-03-15 11:09:55 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1458011394</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2016-03-15 11:09:55 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 9 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-15 11:09:55 response :
+------------
+Array:
+FromUserName : gh_d6e03a1f37f3 ;
+ToUserName : oDMJXt6UEbQUm9GaCLhBfURTet6U ;
+MsgType : text ;
+Content : 测试111 ;
+
+2016-03-15 11:10:01 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1458011401</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[便利店]]></Content>
+<MsgId>6262111284899289475</MsgId>
+</xml>
+
+2016-03-15 11:10:01 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2016-03-15 11:10:01 response :
+------------
+
+2016-03-15 11:11:07 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1458011467</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2016-03-15 11:11:21 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1458011481</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2016-03-15 11:11:21 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 9 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-15 11:11:21 response :
+------------
+Array:
+FromUserName : gh_d6e03a1f37f3 ;
+ToUserName : oDMJXt6UEbQUm9GaCLhBfURTet6U ;
+MsgType : text ;
+Content : 测试111 ;
+
+2016-03-15 11:11:28 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1458011487</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[便利店]]></Content>
+<MsgId>6262111654266476972</MsgId>
+</xml>
+
+2016-03-15 11:11:28 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2016-03-15 11:11:28 response :
+------------
+
+2016-03-15 11:11:38 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1458011498</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[便利店]]></Content>
+<MsgId>6262111701511117233</MsgId>
+</xml>
+
+2016-03-15 11:11:38 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2016-03-15 11:11:38 response :
+------------
+
+2016-03-15 11:14:09 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1458011649</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2016-03-15 11:14:16 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1458011656</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2016-03-15 11:14:16 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 9 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-15 11:14:16 response :
+------------
+Array:
+FromUserName : gh_d6e03a1f37f3 ;
+ToUserName : oDMJXt6UEbQUm9GaCLhBfURTet6U ;
+MsgType : text ;
+Content : 测试111 ;
+
+2016-03-15 11:14:24 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_d6e03a1f37f3]]></ToUserName>
+<FromUserName><![CDATA[oDMJXt6UEbQUm9GaCLhBfURTet6U]]></FromUserName>
+<CreateTime>1458011663</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[便利店]]></Content>
+<MsgId>6262112410180721144</MsgId>
+</xml>
+
+2016-03-15 11:14:24 params :
+------------
+Array:
+message : Array ;
+module : we7_store ;
+rule : 18 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-15 11:14:24 response :
+------------
+Array:
+FromUserName : gh_d6e03a1f37f3 ;
+ToUserName : oDMJXt6UEbQUm9GaCLhBfURTet6U ;
+MsgType : text ;
+Content : aaa ;
+
+2016-03-15 11:42:37 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1458013355</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[便利店]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2016-03-15 11:42:37 params :
+------------
+Array:
+message : Array ;
+module : we7_store ;
+rule : 18 ;
+priority : 0 ;
+keyword : Array ;
+
+2016-03-15 11:42:37 response :
+------------
+Array:
+FromUserName : toUser ;
+ToUserName : fromUser ;
+MsgType : text ;
+Content : aaa ;
+
