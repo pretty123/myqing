@@ -246,7 +246,7 @@ class DB {
 	public function insert($table, $data = array(), $replace = FALSE) {
 		$cmd = $replace ? 'REPLACE INTO' : 'INSERT INTO';		
 		$condition = $this->implode($data, ',');
-		echo $condition;exit;
+		var_dump($condition);exit;
 		return $this->query("$cmd " . $this->tablename($table) . " SET {$condition['fields']}", $condition['params']);
 	}
 	
