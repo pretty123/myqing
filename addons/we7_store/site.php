@@ -146,7 +146,7 @@ public function doWebOrders() {
 
 	$ops = array('display');
 	$op = in_array($_GPC['op'], $ops) ? $_GPC['op'] : 'display';
-
+return $op;exit;
 	if($op == 'display'){
 		// 处理 GET 提交
 		$pageindex = max(intval($_GPC['page']), 1); // 当前页码
@@ -196,7 +196,7 @@ public function doWebOrders() {
 		}
 		unset($key);
 		unset($order);
-return 'aa';exit;
+
 		load()->func('tpl');
 		include $this->template('orders_display');
 	}
