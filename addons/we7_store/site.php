@@ -143,7 +143,7 @@ public function doWebOrders() {
 	global $_W, $_GPC;
 
 	checkauth();
-
+return 'aa';
 	$ops = array('display');
 	$op = in_array($_GPC['op'], $ops) ? $_GPC['op'] : 'display';	
 	
