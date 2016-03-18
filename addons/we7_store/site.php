@@ -145,10 +145,8 @@ public function doWebOrders() {
 	checkauth();
 
 	$ops = array('display');
-	$op = in_array($_GPC['op'], $ops) ? $_GPC['op'] : 'display';
-	$op="display";
-	return $op;exit;
-	if($op == 'display'){
+	$op = in_array($_GPC['op'], $ops) ? $_GPC['op'] : 'display';	
+	
 		// 处理 GET 提交
 		$pageindex = max(intval($_GPC['page']), 1); // 当前页码
 		$pagesize = 2; // 设置分页大小
@@ -200,7 +198,7 @@ public function doWebOrders() {
 
 		load()->func('tpl');
 		include $this->template('orders_display');
-	}
+	
 }
 	public function doMobileOrders() {
 		//这个操作被定义用来呈现 微站个人中心导航
