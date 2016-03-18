@@ -472,9 +472,9 @@ public function doWebOrders() {
 			message('订单生成成功, 请付款.',$this->createMobileUrl('orders', array('op'=>'display')));
 		}
 	}
-	private $tb_order = 'we7_store_orders';
+	//private $tb_order = 'we7_store_orders';
 	
-	private $tb_item = 'we7_store_items';
+	//private $tb_item = 'we7_store_items';
 	
 	public function doMobileOrders() {
 		global  $_W, $_GPC;
