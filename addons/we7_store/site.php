@@ -139,7 +139,7 @@ private $tb_order = 'we7_store_orders';
 
 private $tb_item = 'we7_store_items';
 public function doWebOrders() {
-	return 'aa';exit;
+	
 	global $_W, $_GPC;
 
 	checkauth();
@@ -196,7 +196,7 @@ public function doWebOrders() {
 		}
 		unset($key);
 		unset($order);
-
+return 'aa';exit;
 		load()->func('tpl');
 		include $this->template('orders_display');
 	}
