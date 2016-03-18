@@ -530,4 +530,43 @@ public function doWebOrders() {
 			// 待续
 		}
 	}
+	public function doMobilePay(){
+		global  $_W, $_GPC;
+	
+		checkauth();
+	
+		$ops = array('order');
+		$op = in_array($_GPC['op'], $ops) ? $_GPC['op'] : 'display';
+	
+		if($op == 'order'){
+	
+			$id = intval($_GPC['id']);
+			if(!empty($id)){
+				$order = pdo_fetch('SELECT * FROM '.tablename($this->tb_order).' WHERE id=:id ', array(':id'=>$id));
+			}
+			if (empty($id) || empty($order) || $order['uid'] != $_W['member']['uid'] || $order['uniacid'] != $_W['uniacid']) {
+				message('付款链接错误, 未找到指定订单.','','error');
+			}
+			if(intval($order['status']) != 1){
+				message('订单已付款.');
+			}
+	
+			$items = pdo_fetchall('SELECT * FROM '.tablename($this->tb_item).' WHERE orderid=:id AND uniacid=:uniacid', array(':id'=>$id, ':uniacid'=>$_W['uniacid']));
+			if(empty($items)){
+				message('指定订单没有清单,无需付款.','','error');
+			}
+	
+			$order['items'] = $items;
+	
+			$params['tid'] = $order['id'];
+			$params['user'] = $_W['fans']['from_user'];
+			$params['fee'] = $order['amount'];
+			$params['title'] = $_W['account']['name'];
+			$params['ordersn'] = $order['sn'];
+			$params['virtual'] = false;
+	
+			include $this->template('pay');
+			exit;
+		}
+	}
 }
