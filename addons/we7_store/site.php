@@ -29,32 +29,38 @@ class We7_storeModuleSite extends WeModuleSite {
 		}
 	}
 	public function doMobileStore() {
-		global $_W, $_GPC; 		
-	$goodsid = intval($_GPC['goodsid']);
-	$goods = $this->getGoods($goodsid);
-	if (!empty($goods)) {
-		$goodses = array($goods['id']=>$goods);
-		$cart = $this->getCartByGoodsid($goods['id']);
-		$carts = array($goods['id']=>$cart);
-	} else {
-		$where = ' WHERE uniacid=:uniacid AND status=:status ';
-		$params = array(
-			':uniacid' => $_W['uniacid'],
-			':status' => 2
-		);
-		$cid = intval($_GPC['cid']);
-		if (!empty($cid)) {
-			$where .= ' AND categoryid=:cid';
-			$params[':cid'] = $cid;
-		}
-		$sql = 'SELECT * FROM '.tablename($this->tb_goods). "{$where}";
-		$goodses = pdo_fetchall($sql, $params, 'id');
-		$carts = $this->getCarts();
-	}
+		global $_W, $_GPC;
+	$pageindex = max(intval($_GPC['page']), 1); // 当前页码
+		$pagesize = 2; // 设置分页大小
  
-	$categories = $this->getAllCategory();
-
-	include $this->template('store');
+		$where = ' WHERE uniacid=:uniacid';
+		$params = array(
+			':uniacid'=>$_W['uniacid']
+		);
+		if (!empty($_GPC['keyword'])) {
+			$where .= ' AND ( (`name` like :keyword) OR (`sn` like :keyword) )';
+			$params[':keyword'] = "%{$_GPC['keyword']}%";
+		}
+		if (!empty($_GPC['status'])) {
+			$where .= ' AND (status = :status)';
+			$params[':status'] = intval($_GPC['status']);
+		}
+		if (!empty($_GPC['categoryid'])) {
+			$where .= ' AND (categoryid = :categoryid)';
+			$params[':categoryid'] = intval($_GPC['categoryid']);
+		}
+ 
+		$sql = 'SELECT COUNT(*) FROM '.tablename($this->tb_goods).$where;
+		$total = pdo_fetchcolumn($sql, $params);
+		$pager = pagination($total, $pageindex, $pagesize);
+ 
+		$sql = 'SELECT * FROM '.tablename($this->tb_goods)." {$where} ORDER BY id asc LIMIT ".(($pageindex -1) * $pagesize).','. $pagesize;
+		$goodses = pdo_fetchall($sql, $params, 'id');
+ 
+		$categories = $this->getAllCategory();
+ 
+		load()->func('tpl');
+		include $this->template('goods_display');
 	}
 public function doWebGoods() {
 	global $_W, $_GPC;
