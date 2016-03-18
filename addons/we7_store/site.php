@@ -138,7 +138,7 @@ public function doWebGoods() {
 private $tb_order = 'we7_store_orders';
 
 private $tb_item = 'we7_store_items';
-public function doWebOrders() {
+public function doMobileOrders() {
 	global $_W, $_GPC;
 
 	checkauth();
@@ -200,10 +200,10 @@ public function doWebOrders() {
 		include $this->template('orders_display');
 	}
 }
-	public function doMobileOrders() {
+	//public function doMobileOrders() {
 		//这个操作被定义用来呈现 微站个人中心导航
 		
-	}
+	//}
 	// 管理菜单的入口方法均以 doWeb 开头.
 	
 	/**
