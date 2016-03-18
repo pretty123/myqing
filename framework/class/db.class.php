@@ -74,7 +74,7 @@ class DB {
 	
 	
 	public function query($sql, $params = array()) {
-		echo $sql;exit;		
+		
 		$starttime = microtime();
 		if (empty($params)) {
 			$result = $this->pdo->exec($sql);
