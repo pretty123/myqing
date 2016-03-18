@@ -29,7 +29,32 @@ class We7_storeModuleSite extends WeModuleSite {
 		}
 	}
 	public function doMobileStore() {
-		//这个操作被定义用来呈现 功能封面
+		global $_W, $_GPC;
+ 
+	$goodsid = intval($_GPC['goodsid']);
+	$goods = $this->getGoods($goodsid);
+	if (!empty($goods)) {
+		$goodses = array($goods['id']=>$goods);
+		$cart = $this->getCartByGoodsid($goods['id']);
+		$carts = array($goods['id']=>$cart);
+	} else {
+		$where = ' WHERE uniacid=:uniacid AND status=:status ';
+		$params = array(
+			':uniacid' => $_W['uniacid'],
+			':status' => 2
+		);
+		$cid = intval($_GPC['cid']);
+		if (!empty($cid)) {
+			$where .= ' AND categoryid=:cid';
+			$params[':cid'] = $cid;
+		}
+		$sql = 'SELECT * FROM '.tablename($this->tb_goods). "{$where}";
+		$goodses = pdo_fetchall($sql, $params, 'id');
+		$carts = $this->getCarts();
+	}
+ 
+	$categories = $this->getAllCategory();
+	include $this->template('store');
 	}
 public function doWebGoods() {
 	global $_W, $_GPC;
