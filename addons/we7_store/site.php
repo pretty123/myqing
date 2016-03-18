@@ -91,7 +91,7 @@ class We7_storeModuleSite extends WeModuleSite {
 			}
 	
 			include $this->template('category');
-			pdo_debug();
+			
 		}
 	
 		if($op == 'delete') {
