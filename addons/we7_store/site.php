@@ -77,8 +77,7 @@ class We7_storeModuleSite extends WeModuleSite {
 		if ($op == 'create') {
 	
 			if (checksubmit()) {
-				$category = $_GPC['category']; // 获取打包值
-				var_dump($category);exit;
+				$category = $_GPC['category']; // 获取打包值				
 				if(empty($category['name'])){
 					message('未添加分类名称, 无法保存');
 				}
