@@ -20,6 +20,10 @@ class We7_storeModuleSite extends WeModuleSite {
 		//这个操作被定义用来呈现 微站个人中心导航
 		echo 'aaa';
 	}
+	// 管理菜单的入口方法均以 doWeb 开头.
+	public function doWebCategory() {
+		//这个操作被定义用来呈现 管理中心导航菜单
+	}
 	/**
 	 * 获取所有商品分类
 	 * @return array(cid=>category, ...)
