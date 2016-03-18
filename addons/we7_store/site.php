@@ -200,7 +200,7 @@ private $tb_item = 'we7_store_items';
 // 		include $this->template('orders_display');
 // 	}
 // }
-	public function doMobileOrders() {
+	public function doWebOrders() {
 		//这个操作被定义用来呈现 微站个人中心导航
 		return 'aa';
 		
