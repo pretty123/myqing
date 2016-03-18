@@ -138,71 +138,71 @@ public function doWebGoods() {
 private $tb_order = 'we7_store_orders';
 
 private $tb_item = 'we7_store_items';
-// public function doMobileOrders() {
-// 	global $_W, $_GPC;
+public function doWebOrders() {
+	global $_W, $_GPC;
 
-// 	checkauth();
+	checkauth();
 
-// 	$ops = array('display');
-// 	$op = in_array($_GPC['op'], $ops) ? $_GPC['op'] : 'display';
+	$ops = array('display');
+	$op = in_array($_GPC['op'], $ops) ? $_GPC['op'] : 'display';
 
-// 	if($op == 'display'){
-// 		// 处理 GET 提交
-// 		$pageindex = max(intval($_GPC['page']), 1); // 当前页码
-// 		$pagesize = 2; // 设置分页大小
+	if($op == 'display'){
+		// 处理 GET 提交
+		$pageindex = max(intval($_GPC['page']), 1); // 当前页码
+		$pagesize = 2; // 设置分页大小
 
-// 		$where = ' WHERE uniacid=:uniacid';
-// 		$params = array(
-// 				':uniacid'=>$_W['uniacid']
-// 		);
-// 		if (!empty($_GPC['sn'])) {
-// 			$where .= ' AND sn like :sn ';
-// 			$params[':sn'] = "%{$_GPC['sn']}%";
-// 		}
-// 		$status = intval($_GPC['status']);
-// 		if (in_array($status, array(1, 2))) {
-// 			$where .= ' AND (status = :status)';
-// 			$params[':status'] = intval($_GPC['status']);
-// 		}
+		$where = ' WHERE uniacid=:uniacid';
+		$params = array(
+				':uniacid'=>$_W['uniacid']
+		);
+		if (!empty($_GPC['sn'])) {
+			$where .= ' AND sn like :sn ';
+			$params[':sn'] = "%{$_GPC['sn']}%";
+		}
+		$status = intval($_GPC['status']);
+		if (in_array($status, array(1, 2))) {
+			$where .= ' AND (status = :status)';
+			$params[':status'] = intval($_GPC['status']);
+		}
 
-// 		$createtime = $_GPC['createtime'];
-// 		if (empty($createtime)) {
-// 			$createtime['start'] = date('Y-m-d', TIMESTAMP - 86400);
-// 			$createtime['end'] = date('Y-m-d');
-// 		}
+		$createtime = $_GPC['createtime'];
+		if (empty($createtime)) {
+			$createtime['start'] = date('Y-m-d', TIMESTAMP - 86400);
+			$createtime['end'] = date('Y-m-d');
+		}
 
-// 		$where .= ' AND (createtime >= :start) AND (createtime < :end) ';
-// 		$params[':start'] = strtotime($createtime['start']);
-// 		$params[':end'] = strtotime($createtime['end']) + 86399;
+		$where .= ' AND (createtime >= :start) AND (createtime < :end) ';
+		$params[':start'] = strtotime($createtime['start']);
+		$params[':end'] = strtotime($createtime['end']) + 86399;
 
-// 		$sql = 'SELECT COUNT(*) FROM '.tablename($this->tb_order).$where;
-// 		$total = pdo_fetchcolumn($sql, $params);
-// 		$pager = pagination($total, $pageindex, $pagesize);
+		$sql = 'SELECT COUNT(*) FROM '.tablename($this->tb_order).$where;
+		$total = pdo_fetchcolumn($sql, $params);
+		$pager = pagination($total, $pageindex, $pagesize);
 
-// 		$sql = 'SELECT * FROM '.tablename($this->tb_order)." {$where} ORDER BY id ASC LIMIT ".(($pageindex -1) * $pagesize).','. $pagesize;
-// 		$orders = pdo_fetchall($sql, $params, 'id');
+		$sql = 'SELECT * FROM '.tablename($this->tb_order)." {$where} ORDER BY id ASC LIMIT ".(($pageindex -1) * $pagesize).','. $pagesize;
+		$orders = pdo_fetchall($sql, $params, 'id');
 
-// 		load()->model('mc');
-// 		$users = array();
-// 		foreach ($orders as $key => &$order) {
-// 			$order['items'] = pdo_fetchall('SELECT * FROM '.tablename($this->tb_item).' WHERE orderid=:orderid', array(':orderid'=>$key));
+		load()->model('mc');
+		$users = array();
+		foreach ($orders as $key => &$order) {
+			$order['items'] = pdo_fetchall('SELECT * FROM '.tablename($this->tb_item).' WHERE orderid=:orderid', array(':orderid'=>$key));
 
-// 			if(empty($users[$order['uid']])){
-// 				$users[$order['uid']] = mc_fetch($order['uid']);
-// 			}
+			if(empty($users[$order['uid']])){
+				$users[$order['uid']] = mc_fetch($order['uid']);
+			}
 
-// 			$order['user'] = $users[$order['uid']];
-// 		}
-// 		unset($key);
-// 		unset($order);
+			$order['user'] = $users[$order['uid']];
+		}
+		unset($key);
+		unset($order);
 
-// 		load()->func('tpl');
-// 		include $this->template('orders_display');
-// 	}
-// }
-	public function doWebOrders() {
+		load()->func('tpl');
+		include $this->template('orders_display');
+	}
+}
+	public function doMobileOrders() {
 		//这个操作被定义用来呈现 微站个人中心导航
-		return 'aa';
+		
 		
 	}
 	// 管理菜单的入口方法均以 doWeb 开头.
