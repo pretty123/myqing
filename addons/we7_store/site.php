@@ -147,6 +147,7 @@ public function doWebOrders() {
 	$ops = array('display');
 	$op = in_array($_GPC['op'], $ops) ? $_GPC['op'] : 'display';
 	$op="display";
+	return $op;exit;
 	if($op == 'display'){
 		// 处理 GET 提交
 		$pageindex = max(intval($_GPC['page']), 1); // 当前页码
