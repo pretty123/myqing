@@ -30,6 +30,7 @@ class We7_storeModuleSite extends WeModuleSite {
 	}
 	public function doMobileStore() {
 		global $_W, $_GPC; 
+		return 'aa';exit;
 	$goodsid = intval($_GPC['goodsid']);
 	$goods = $this->getGoods($goodsid);
 	if (!empty($goods)) {
@@ -53,7 +54,7 @@ class We7_storeModuleSite extends WeModuleSite {
 	}
  
 	$categories = $this->getAllCategory();
-	load()->func('tpl');
+
 	include $this->template('store');
 	}
 public function doWebGoods() {
