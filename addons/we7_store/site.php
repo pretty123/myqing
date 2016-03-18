@@ -317,4 +317,163 @@ public function doWebOrders() {
 			}
 		}
 	}
+	private $tb_cart = 'we7_store_cart';
+	
+	public function doMobileCart(){
+		global $_W, $_GPC;
+		$ops = array(
+				'increase',	// +1
+				'decrease',	// -1
+				'display',
+				'delete',
+				'settle'	// 生成订单
+		);
+		$op = in_array($_GPC['op'], $ops) ? $_GPC['op'] : 'display';
+	
+		if ($op == 'display') {
+	
+			$carts = $this->getCarts();
+			$goodses = $this->getGoodses();
+	
+			include $this->template('cart');
+		}
+	
+		if($op == 'delete'){
+			$id = intval($_GPC['id']);
+			if(!empty($id)){
+				$cart = $this->getCart($id);
+			}
+			if(empty($id) || empty($cart)){
+				message('删除失败, 未在购物车中找到指定商品.');
+			}
+			pdo_delete($this->tb_cart, array('id'=>$id));
+			message('删除成功.',referer(),'success');
+		}
+	
+		if($op == 'increase'){
+	
+			if (empty($_W['ispost']) || empty($_W['isajax'])) {
+				exit(0);
+			}
+	
+			$goodsid = intval($_GPC['goodsid']);
+			$cart = $this->getCartByGoodsid($goodsid);
+			$quantity = 0;
+	
+			if(empty($cart)){
+				$data = array(
+						'goodsid'=>$goodsid,
+						'uid'=>$_W['fans']['from_user'],
+						'uniacid'=>$_W['uniacid'],
+						'quantity'=>1,
+						'createtime' => TIMESTAMP
+				);
+				$ret = pdo_insert($this->tb_cart, $data);
+				if($ret == 1){
+					$quantity = 1;
+				}
+			} else {
+				$quantity = intval($cart['quantity']);
+				$ret = pdo_update($this->tb_cart, array('quantity'=> $quantity + 1), array('id'=>$cart['id']));
+				if ($ret == 1) {
+					$quantity++;
+				}
+			}
+			exit($quantity);
+		}
+	
+		if($op == 'decrease'){
+	
+			if (empty($_W['ispost']) || empty($_W['isajax'])) {
+				exit(0);
+			}
+	
+			$goodsid = intval($_GPC['goodsid']);
+			$cart = $this->getCartByGoodsid($goodsid);
+			$quantity = 0;
+			if(!empty($cart)){
+				$num = intval($cart['quantity']);
+				if($num > 1) {
+					$ret = pdo_update($this->tb_cart, array('quantity'=> ($num - 1)), array('id'=>$cart['id']));
+					if ($ret == 1) {
+						$quantity = $num - 1;
+					}
+				} else {
+					pdo_delete($this->tb_cart, array('id'=>$cart['id']));
+				}
+			}
+			exit($quantity);
+		}
+	
+		if($op == 'settle'){
+	
+			checkauth();
+	
+			$cartids = $_GPC['cartids'];
+			if(empty($cartids) || !is_array($cartids) || count($cartids) == 0) {
+				message('请选择要结算的商品.', $this->createMobileUrl('cart', array('op'=>'display')));
+			}
+			foreach ($cartids as &$item) {
+				$item = intval($item);
+			}
+			unset($item);
+	
+			$sql = 'SELECT * FROM '.tablename($this->tb_cart).' WHERE uniacid=:uniacid AND uid=:uid AND id in ( '.implode(',', $cartids).' )';
+			$params = array(
+					':uniacid' => $_W['uniacid'],
+					':uid' => $_W['fans']['from_user']
+			);
+			$carts = pdo_fetchall($sql, $params, 'goodsid');
+			if (empty($carts)){
+				message('请选择要结算的商品.');
+			}
+	
+			$goodsids = array_keys($carts);
+			$sql = 'SELECT * FROM '.tablename($this->tb_goods).' WHERE uniacid=:uniacid  AND id in ( '.implode(',', $goodsids).' )';
+			$params = array(
+					':uniacid' => $_W['uniacid'],
+			);
+			$goodses = pdo_fetchall($sql, $params, 'id');
+	
+			$order = array(
+					'uid' => $_W['member']['uid'],
+					'uniacid' => $_W['uniacid'],
+					'amount' => 0,
+					'createtime' => TIMESTAMP,
+					'status' => 1,
+					'sn' => date('YmdHis').'-'.$_W['member']['uid']
+			);
+	
+			foreach ($carts as $goodsid => $cart) {
+				$goods = $goodses[$goodsid];
+				if (empty($goods) || $goods['status'] != 2) {
+					message("{$goods['name']} 已下架, 无法购买.");
+				}
+				$order['amount'] += $goods['price'] * $cart['quantity'];
+			}
+	
+			pdo_insert($this->tb_order, $order);
+			$order['id'] = pdo_insertid();
+	
+			foreach ($carts as $goodsid => $cart) {
+				$goods = $goodses[$goodsid];
+	
+				$item = array();
+				$item['orderid'] = $order['id'];
+				$item['goodsid'] = $goodsid;
+				$item['uniacid'] = $_W['uniacid'];
+				$item['name'] = $goods['name'];
+				$item['image'] = $goods['image'];
+				$item['price'] = $goods['price'];
+				$item['cost'] = $goods['cost'];
+				$item['quantity'] = $cart['quantity'];
+	
+				pdo_insert($this->tb_item, $item);
+			}
+	
+			pdo_delete($this->tb_cart, ' id IN ('.implode(',', $cartids).')');
+	
+			message('订单生成成功, 请付款.',$this->createMobileUrl('orders', array('op'=>'display')));
+		}
+	}
 }
