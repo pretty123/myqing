@@ -74,6 +74,7 @@ class DB {
 	
 	
 	public function query($sql, $params = array()) {
+		echo $sql;exit;
 		$starttime = microtime();
 		if (empty($params)) {
 			$result = $this->pdo->exec($sql);
@@ -244,8 +245,7 @@ class DB {
 
 	
 	public function insert($table, $data = array(), $replace = FALSE) {
-		$cmd = $replace ? 'REPLACE INTO' : 'INSERT INTO';
-		var_dump($data);exit;
+		$cmd = $replace ? 'REPLACE INTO' : 'INSERT INTO';		
 		$condition = $this->implode($data, ',');
 		return $this->query("$cmd " . $this->tablename($table) . " SET {$condition['fields']}", $condition['params']);
 	}
