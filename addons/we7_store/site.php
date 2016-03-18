@@ -225,11 +225,7 @@ public function doWebOrders() {
 		include $this->template('orders_display');
 	
 }
-	public function doMobileOrders() {
-		//这个操作被定义用来呈现 微站个人中心导航
-		
-		
-	}
+
 	// 管理菜单的入口方法均以 doWeb 开头.
 	
 	/**
@@ -474,6 +470,64 @@ public function doWebOrders() {
 			pdo_delete($this->tb_cart, ' id IN ('.implode(',', $cartids).')');
 	
 			message('订单生成成功, 请付款.',$this->createMobileUrl('orders', array('op'=>'display')));
+		}
+	}
+	private $tb_order = 'we7_store_orders';
+	
+	private $tb_item = 'we7_store_items';
+	
+	public function doMobileOrders() {
+		global  $_W, $_GPC;
+	
+		checkauth();
+	
+		$ops = array('delete', 'display');
+		$op = in_array($_GPC['op'], $ops) ? $_GPC['op'] : 'display';
+	
+		if($op == 'display'){
+	
+			$where = ' WHERE uid=:uid AND uniacid=:uniacid ';
+			$params = array(
+					':uid' => $_W['member']['uid'],
+					':uniacid' => $_W['uniacid']
+			);
+			if(!isset($_GPC['status'])){
+				$_GPC['status'] = 1;
+			}
+			$status = intval($_GPC['status']);
+			if(in_array($status, array(1, 2))){
+				$where .= ' AND status=:status ';
+				$params[':status'] = $status;
+			}
+	
+			$sn = $_GPC['sn'];
+			if(!empty($sn)){
+				$where .= ' AND sn LIKE :sn';
+				$params[':status'] = "%{$sn}%";
+			}
+	
+			$pageindex = max(1, intval($_GPC['page']));
+			$pagesize = 2;
+			$sql = 'SELECT COUNT(*) FROM '.tablename($this->tb_order). $where;
+			$total = pdo_fetchcolumn($sql, $params);
+			$total = intval($total);
+			$pager = pagination($total, $pageindex, $pagesize,'', array('before' => 0, 'after' => 0));
+	
+			$sql = 'SELECT * FROM '.tablename($this->tb_order)." {$where} ORDER BY status asc, id DESC LIMIT ".(($pageindex-1)*$pagesize)." , ".$pagesize;
+			$orders = pdo_fetchall($sql, $params);
+	
+			if (!empty($orders)) {
+				foreach ($orders as &$order) {
+					$order['items'] = pdo_fetchall('SELECT * FROM '.tablename($this->tb_item).' WHERE orderid=:orderid', array(':orderid'=>$order['id']));
+				}
+			}
+			unset($order);
+	
+			include $this->template('orders');
+		}
+	
+		if($op == 'delete'){
+			// 待续
 		}
 	}
 }
