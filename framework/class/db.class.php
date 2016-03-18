@@ -73,8 +73,7 @@ class DB {
 	}
 	
 	
-	public function query($sql, $params = array()) {
-		echo $sql;exit;
+	public function query($sql, $params = array()) {		
 		$starttime = microtime();
 		if (empty($params)) {
 			$result = $this->pdo->exec($sql);
@@ -93,7 +92,7 @@ class DB {
 			$info['sql'] = $sql;
 			$info['params'] = $params;
 			$info['error'] = $statement->errorInfo();
-			$this->debug(false, $info);
+			$this->debug(true, $info);
 		}
 		$endtime = microtime();
 		$this->performance($sql, $endtime - $starttime);
