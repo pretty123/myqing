@@ -53,8 +53,8 @@ class We7_storeModuleSite extends WeModuleSite {
 	}
  
 	$categories = $this->getAllCategory();
-	include $this->template('goods_display');
-	//include $this->template('store');
+	load()->func('tpl');
+	include $this->template('store');
 	}
 public function doWebGoods() {
 	global $_W, $_GPC;
