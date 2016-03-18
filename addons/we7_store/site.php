@@ -141,8 +141,8 @@ private $tb_item = 'we7_store_items';
 public function doWebOrders() {
 	
 	global $_W, $_GPC;
-	return 'aa';exit;
-	checkauth();
+	//return 'aa';exit;
+	//checkauth();
 
 	$ops = array('display');
 	$op = in_array($_GPC['op'], $ops) ? $_GPC['op'] : 'display';	
